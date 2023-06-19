@@ -1,7 +1,7 @@
 import Uis from "./uis";
 import Backends from "./backends";
 import GraphqlServers from "./graph-servers";
-import Option from "../../types/option";
+import Option from "../types/option";
 
 export const ReactBasedUiOptions: Option[] = [Uis.tw, Uis.mui, Uis.chakra, Uis.none];
 export const VueBasedUiOptions: Option[] = [Uis.tw, Uis.element, Uis.vuetify, Uis.none];

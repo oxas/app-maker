@@ -9,7 +9,7 @@ import { promisify } from "util";
 import { cancel, isCancel, log, spinner } from "@clack/prompts";
 import kleur from "kleur";
 import { GIT_USER_NAME } from "../utils/const";
-import Framework from "../../types/framework";
+import Framework from "../types/framework";
 
 const pipeline = promisify(Stream.pipeline);
 

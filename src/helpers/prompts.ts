@@ -1,6 +1,6 @@
 import kleur from "kleur";
-import Option from "../../types/option";
-import Prompt, { ConfirmPrompt } from "../../types/prompt";
+import Option from "../types/option";
+import Prompt, { ConfirmPrompt } from "../types/prompt";
 import Uis from "../data/uis";
 
 export const PromptLanguage = (): ConfirmPrompt => {

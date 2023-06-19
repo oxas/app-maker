@@ -4,7 +4,7 @@ import Next from "./next";
 import kleur from "kleur";
 import ReactNative from "./react-native";
 import Electron from "./electron";
-import Framework from "../../../types/framework";
+import Framework from "../../types/framework";
 
 const Frameworks: Framework[] = [
 	Next,

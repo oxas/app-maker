@@ -1,9 +1,9 @@
 import kleur from "kleur";
-import Framework from "../../../types/framework";
+import Framework from "../../types/framework";
 import { BackendForFullstack, ReactBasedUiOptions } from "../options";
 import { PromptBackend, PromptLanguage, PromptUi } from "../../helpers/prompts";
 import { intro } from "@clack/prompts";
-import { ConfirmPrompt } from "../../../types/prompt";
+import { ConfirmPrompt } from "../../types/prompt";
 
 export const AppRouterPrompt = (): ConfirmPrompt => {
 	return {

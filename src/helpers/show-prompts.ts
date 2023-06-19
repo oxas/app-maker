@@ -1,6 +1,6 @@
 import { cancel, confirm, isCancel, select } from "@clack/prompts";
-import Prompt from "../../types/prompt";
-import Option from "../../types/option";
+import Prompt from "../types/prompt";
+import Option from "../types/option";
 type Result = string | null;
 let result: Result[] = [];
 

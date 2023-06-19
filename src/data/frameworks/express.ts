@@ -1,7 +1,7 @@
 import kleur from "kleur";
 import { BackendForBackend, NonFastifyGraphqlServers } from "../options";
 import { PromptApiType, PromptBackend, PromptLanguage } from "../../helpers/prompts";
-import Framework from "../../../types/framework";
+import Framework from "../../types/framework";
 
 const Express: Framework = {
 	id: "express",

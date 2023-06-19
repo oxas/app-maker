@@ -1,5 +1,5 @@
-import { BundlerKeys } from "../../types/keys";
-import Option from "../../types/option";
+import { BundlerKeys } from "../types/keys";
+import Option from "../types/option";
 
 const Bundlers: { [key in BundlerKeys]: Option } = {
 	webpack: {

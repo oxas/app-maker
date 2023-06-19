@@ -1,5 +1,5 @@
-import { UiKeys } from "../../types/keys";
-import Option from "../../types/option";
+import { UiKeys } from "../types/keys";
+import Option from "../types/option";
 
 const Uis: { [key in UiKeys]: Option } = {
 	// flag will be dim & can be - recommended | default | official graphql library

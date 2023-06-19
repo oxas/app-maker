@@ -2,7 +2,7 @@
 import { cancel, intro, isCancel, log, outro, text } from "@clack/prompts";
 import kleur from "kleur";
 import path from "path";
-import Framework from "../types/framework";
+import Framework from "./types/framework";
 import Frameworks from "./data/frameworks";
 import fetchTemplate from "./helpers/fetch-template";
 import getFramework from "./helpers/get-framework";
@@ -51,5 +51,4 @@ async function run() {
 	await installPkg(root);
 	outro("You are done!");
 }
-
 run();

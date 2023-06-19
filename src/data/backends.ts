@@ -1,5 +1,5 @@
-import { BackendKeys, BackendOptionKeys } from "../../types/keys";
-import Option from "../../types/option";
+import { BackendKeys, BackendOptionKeys } from "../types/keys";
+import Option from "../types/option";
 
 const beo: { [key in BackendOptionKeys]: Option } = {
 	//for Back End Option

@@ -1,5 +1,5 @@
-import { GraphServerKeys } from "../../types/keys";
-import Option from "../../types/option";
+import { GraphServerKeys } from "../types/keys";
+import Option from "../types/option";
 
 const GraphqlServers: { [key in GraphServerKeys]: Option } = {
 	apollo: {

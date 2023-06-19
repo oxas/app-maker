@@ -14,10 +14,10 @@ import {
 	PromptLanguage,
 	PromptUi,
 } from "../../helpers/prompts";
-import Prompt from "../../../types/prompt";
+import Prompt from "../../types/prompt";
 import React from "./react";
 import Next from "./next";
-import Framework from "../../../types/framework";
+import Framework from "../../types/framework";
 import Bundlers from "../bundlers";
 
 export const PromptElectronFramework = (): Prompt => ({

@@ -1,7 +1,7 @@
 import kleur from "kleur";
 import { BackendForFrontend, ReactBasedUiOptions } from "../options";
 import { PromptBackend, PromptLanguage, PromptTailwind, PromptUi } from "../../helpers/prompts";
-import Framework from "../../../types/framework";
+import Framework from "../../types/framework";
 
 const React: Framework = {
 	id: "react",
