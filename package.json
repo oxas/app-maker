@@ -1,9 +1,9 @@
 {
 	"name": "@oxas/appmaker",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "Make Node.JS Application Instantly",
-	"main": "dist/index.js",
-	"bin": "dist/index.js",
+	"main": "dist/src/index.js",
+	"bin": "dist/src/index.js",
 	"keywords": [
 		"React",
 		"Express"
@@ -19,7 +19,7 @@
 	},
 	"homepage": "https://github.com/oxas/app-maker#readme",
 	"scripts": {
-		"build": "tsc",
+		"build": "del /f /s /q dist 1>nul && rmdir /s /q dist && tsc",
 		"start": "npm run build && node .",
 		"dev": "ts-node src/index.ts"
 	},
