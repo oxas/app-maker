@@ -2,4 +2,4 @@
 
 ### Documentation
 
-Visit the [app-maker.com](https://github.com/) website for all the things.
+Visit the [app-maker.com](https://github.com/oxas/app-maker) website for all the things.
