@@ -1,4 +1,4 @@
-# AppMaker: Make Node.JS Application Instantly
+# AppMaker: Make Node.js Application Instantly
 
 [@oxas/appmaker](https://www.npmjs.com/package/@oxas/appmaker) is tool that enables you to quickly generate application templates for various frameworks and technologies. It simplifies the process of setting up a new project by automating the creation of the basic structure, files, and configuration, saving you valuable time and effort.
 
