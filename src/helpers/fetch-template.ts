@@ -10,6 +10,7 @@ import { cancel, isCancel, log, spinner } from "@clack/prompts";
 import kleur from "kleur";
 import { GIT_USER_NAME } from "../utils/const";
 import Framework from "../types/framework";
+import getGitRepoNameForFramework from "../utils/getGitRepoNameForFramework";
 
 const pipeline = promisify(Stream.pipeline);
 
@@ -20,20 +21,24 @@ async function downloadTar(url: string) {
 }
 
 async function downloadAndExtractRepo(root: string, framework: string, template: string) {
-	const url = `https://codeload.github.com/${GIT_USER_NAME}/${framework}/tar.gz/main`;
+	const url = `https://codeload.github.com/${GIT_USER_NAME}/${getGitRepoNameForFramework(
+		framework
+	)}/tar.gz/main`;
 	const tempFile = await downloadTar(url);
 	await tar.x({
 		file: tempFile,
 		cwd: root,
 		strip: 2,
-		filter: (p) => p.includes(`${framework}-main/${template}/`),
-	}); // how many paths for last do you wanna skip
+		filter: (p) => p.includes(`${getGitRepoNameForFramework(framework)}-main/${template}/`),
+	}); // how many paths form last do you wanna skip
 	fs.unlink(tempFile, () => {});
 }
 
 async function checkResponse(framework: string, template: string): Promise<boolean> {
 	const res = await got(
-		`https://api.github.com/repos/${GIT_USER_NAME}/${framework}/contents/${template}`
+		`https://api.github.com/repos/${GIT_USER_NAME}/${getGitRepoNameForFramework(
+			framework
+		)}/contents/${template}`
 	).catch((e) => e);
 	if (res.statusCode === 200) {
 		return true;

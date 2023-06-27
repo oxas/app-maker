@@ -1,12 +1,12 @@
 import kleur from "kleur";
+import Uis from "../data/uis";
 import Option from "../types/option";
 import Prompt, { ConfirmPrompt } from "../types/prompt";
-import Uis from "../data/uis";
 
 export const PromptLanguage = (): ConfirmPrompt => {
 	return {
 		type: "confirm",
-		message: `🧪 Would you like to use${kleur.cyan("TypeScript")} with this project?`,
+		message: `🧪 Would you like to use ${kleur.cyan("TypeScript")} with this project?`,
 		active: { id: "ts", label: "Yes" },
 		inactive: { id: "js", label: "No" },
 		initial: true,

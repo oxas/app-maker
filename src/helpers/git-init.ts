@@ -49,5 +49,6 @@ export default async function gitInit(root: string) {
 	}
 	if (isCancel(res)) {
 		cancel("Operation cancelled.");
+		process.exit(1);
 	}
 }

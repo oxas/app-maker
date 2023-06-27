@@ -18,7 +18,7 @@ export const AppRouterPrompt = (): ConfirmPrompt => {
 const Next: Framework = {
 	id: "next",
 	label: "Fullstack: Next",
-	intro: `🌟 Creating a new ${kleur.cyan("Next.js")} project`,
+	intro: `🌟 Creating a new ${kleur.cyan("Next.js")} app`,
 	outro: "",
 	hint: "Most popular fullstack framework todo.",
 	prompts: [
