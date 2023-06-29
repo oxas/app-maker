@@ -1,17 +1,17 @@
 import kleur from "kleur";
 import Uis from "../data/uis";
 import Option from "../types/option";
-import Prompt, { ConfirmPrompt } from "../types/prompt";
+import Prompt from "../types/prompt";
 
-export const PromptLanguage = (): ConfirmPrompt => {
-	return {
-		type: "confirm",
-		message: `🧪 Would you like to use ${kleur.cyan("TypeScript")} with this project?`,
-		active: { id: "ts", label: "Yes" },
-		inactive: { id: "js", label: "No" },
-		initial: true,
-	};
-};
+// export const PromptLanguage = (): ConfirmPrompt => {
+// 	return {
+// 		type: "confirm",
+// 		message: `🧪 Would you like to use ${kleur.cyan("TypeScript")} with this project?`,
+// 		active: { id: "ts", label: "Yes" },
+// 		inactive: { id: "js", label: "No" },
+// 		initial: true,
+// 	};
+// };
 
 export const PromptBundler = (bundlerOptions: Option[]): Prompt => {
 	return {
@@ -50,7 +50,7 @@ export const PromptBackend = (backendOptions: Option[]): Prompt => {
 export const PromptApiType = (graphqlServerOptions: Option[]): Prompt => {
 	return {
 		type: "confirm",
-		message: `☁️ Select your server type?`,
+		message: `☁ Select your server type?`,
 		active: { id: null, label: "REST API" },
 		inactive: {
 			id: "graph",

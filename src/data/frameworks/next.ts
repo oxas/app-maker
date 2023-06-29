@@ -1,7 +1,7 @@
 import kleur from "kleur";
 import Framework from "../../types/framework";
 import { BackendForFullstack, ReactBasedUiOptions } from "../options";
-import { PromptBackend, PromptLanguage, PromptUi } from "../../helpers/prompts";
+import { PromptBackend, PromptUi } from "../../helpers/prompts";
 import { intro } from "@clack/prompts";
 import { ConfirmPrompt } from "../../types/prompt";
 
@@ -21,12 +21,7 @@ const Next: Framework = {
 	intro: `🌟 Creating a new ${kleur.cyan("Next.js")} app`,
 	outro: "",
 	hint: "Most popular fullstack framework todo.",
-	prompts: [
-		PromptLanguage(),
-		AppRouterPrompt(),
-		PromptUi(ReactBasedUiOptions),
-		PromptBackend(BackendForFullstack),
-	],
+	prompts: [AppRouterPrompt(), PromptUi(ReactBasedUiOptions), PromptBackend(BackendForFullstack)],
 };
 
 export default Next;

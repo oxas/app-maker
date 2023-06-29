@@ -28,7 +28,7 @@ async function run() {
 	const defaultProjectName = "my-app";
 	const appName =
 		(await text({
-			message: "What is your project named?",
+			message: "📂 What is your project named?",
 			placeholder: defaultProjectName,
 			validate(v) {
 				const validation = validateProjName(path.basename(path.resolve(v)));
@@ -43,7 +43,8 @@ async function run() {
 	}
 	const root = (await makeDir(appName)) as string;
 	const responses = await showPrompts(framework.prompts);
-	const template = getTemplateName(responses);
+	const templateStr: string = getTemplateName(responses);
+	const template = templateStr.trim() == "" ? "base" : templateStr;
 	console.log(template);
 	await fetchTemplate(root, frameworkId, "ts-app");
 	await patchPackageJson(root);

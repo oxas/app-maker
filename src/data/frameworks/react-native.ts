@@ -1,6 +1,6 @@
 import kleur from "kleur";
 import { BackendForBackend, BackendForFrontend, NonFastifyGraphqlServers } from "../options";
-import { PromptApiType, PromptBackend, PromptLanguage } from "../../helpers/prompts";
+import { PromptApiType, PromptBackend } from "../../helpers/prompts";
 import Framework from "../../types/framework";
 
 const ReactNative: Framework = {
@@ -9,7 +9,7 @@ const ReactNative: Framework = {
 	intro: `🌟 Creating a new ${kleur.cyan("React Native")} project`,
 	outro: "",
 	hint: "Most popular framework for web todo.",
-	prompts: [PromptLanguage(), PromptBackend(BackendForFrontend)],
+	prompts: [PromptBackend(BackendForFrontend)],
 };
 
 export default ReactNative;

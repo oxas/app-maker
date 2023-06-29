@@ -7,13 +7,7 @@ import {
 	Tailwind,
 	VueBasedUiOptions,
 } from "../options";
-import {
-	PromptApiType,
-	PromptBackend,
-	PromptBundler,
-	PromptLanguage,
-	PromptUi,
-} from "../../helpers/prompts";
+import { PromptApiType, PromptBackend, PromptBundler, PromptUi } from "../../helpers/prompts";
 import Prompt from "../../types/prompt";
 import React from "./react";
 import Next from "./next";
@@ -45,7 +39,7 @@ const Electron: Framework = {
 	intro: `🌟 Creating a new ${kleur.cyan("Electron.js")} project`,
 	outro: "",
 	hint: "Most popular framework for web todo.",
-	prompts: [PromptLanguage(), PromptElectronFramework(), PromptBackend(BackendForFrontend)],
+	prompts: [PromptElectronFramework(), PromptBackend(BackendForFrontend)],
 };
 
 export default Electron;
