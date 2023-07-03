@@ -14,9 +14,14 @@ import showPrompts from "./helpers/show-prompts";
 import validateProjName from "./helpers/validate-proj-name";
 import getTemplateName from "./utils/getTemplateName";
 import pkgJson from "../package.json";
+import { Command } from "commander";
+import Update from "./utils/updateVersion";
+
+const VERSION = pkgJson.version;
 
 async function run() {
-	intro(`${kleur.bgCyan(" Nodeup ")} (${pkgJson.version})`);
+	console.log();
+	intro(`${kleur.bgCyan(" Nodeup ")} (${VERSION})`);
 	const frameworkId: string = await getFramework();
 	const framework: Framework | undefined = Frameworks.find((f) => f.id === frameworkId);
 	if (!framework) {
@@ -52,4 +57,9 @@ async function run() {
 	await installPkg(root);
 	outro("You are done!");
 }
-run();
+
+const program = new Command();
+program.version(VERSION, "-v, --version", "Show the current version");
+program.command("make", { isDefault: true }).description("Create a new project").action(run);
+program.command("update").description("Update appmaker to latest version").action(Update);
+program.parse();

@@ -21,10 +21,13 @@
 	"scripts": {
 		"build": "del /f /s /q dist 1>nul && rmdir /s /q dist && tsc",
 		"start": "npm run build && node .",
-		"dev": "ts-node src/index.ts"
+		"dev": "ts-node src/index.ts",
+		"dev:help": "ts-node src/index.ts -h",
+		"dev:update": "ts-node src/index.ts update"
 	},
 	"dependencies": {
 		"@clack/prompts": "^0.6.3",
+		"commander": "^11.0.0",
 		"cross-spawn": "^7.0.3",
 		"got": "11.8.6",
 		"kleur": "^4.1.5",
