@@ -16,14 +16,17 @@ import getTemplateName from "./utils/getTemplateName";
 import pkgJson from "../package.json";
 import { Command } from "commander";
 import Update from "./utils/updateVersion";
+import getAppType from "./helpers/get-apptype";
+import { AppTypeKeys } from "./types/keys";
 
 const VERSION = pkgJson.version;
 
 async function run() {
 	console.log();
-	intro(`${kleur.bgCyan(" Nodeup ")} (${VERSION})`);
-	const frameworkId: string = await getFramework();
-	const framework: Framework | undefined = Frameworks.find((f) => f.id === frameworkId);
+	intro(`${kleur.bgCyan(" AppMaker ")} (${VERSION})`);
+	const appType = (await getAppType()) as AppTypeKeys;
+	const frameworkId: string = await getFramework(appType);
+	const framework: Framework | undefined = Frameworks[appType].find((f) => f.id === frameworkId);
 	if (!framework) {
 		log.error(kleur.red("Error: Something isn't right!!"));
 		process.exit();
@@ -59,7 +62,10 @@ async function run() {
 }
 
 const program = new Command();
-program.version(VERSION, "-v, --version", "Show the current version");
-program.command("make", { isDefault: true }).description("Create a new project").action(run);
-program.command("update").description("Update appmaker to latest version").action(Update);
+program.version(VERSION, "-v, --version", "Display the installed version of AppMaker.");
+program.command("make", { isDefault: true }).description("Create a new project.").action(run);
+program
+	.command("update")
+	.description("Update the AppMaker to the most recent version.")
+	.action(Update);
 program.parse();

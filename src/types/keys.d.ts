@@ -29,3 +29,5 @@ export type UiKeys = "tw" | "mui" | "chakra" | "vuetify" | "element" | "none";
 export type GraphServerKeys = "apollo" | "yoga" | "mercurius" | "default";
 
 export type BundlerKeys = "vite" | "webpack" | "parcel";
+
+export type AppTypeKeys = "web" | "mobile" | "desktop" | "cli";

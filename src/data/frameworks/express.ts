@@ -9,7 +9,7 @@ const Express: Framework = {
 	intro: `🌟 Creating a new ${kleur.cyan("Express.js")} project`,
 	outro: "",
 	hint: "Most popular framework for web todo.",
-	prompts: [PromptApiType(NonFastifyGraphqlServers), PromptBackend(BackendForBackend)],
+	prompts: [PromptBackend(BackendForBackend), PromptApiType(NonFastifyGraphqlServers)],
 };
 
 export default Express;

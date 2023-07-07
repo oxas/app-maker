@@ -1,9 +1,10 @@
 import { isCancel, cancel, select } from "@clack/prompts";
 import Frameworks from "../data/frameworks";
-export default async function getFramework(): Promise<string> {
+import { AppTypeKeys } from "../types/keys";
+export default async function getFramework(appType: AppTypeKeys): Promise<string> {
 	const framework = await select({
-		message: "Pick a framework to continue",
-		options: Frameworks.map((f) => {
+		message: "Please select a framework for your app",
+		options: Frameworks[appType].map((f) => {
 			return { value: f.id, label: f.label, hint: f.hint };
 		}),
 	});

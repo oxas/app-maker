@@ -42,7 +42,7 @@ export const PromptTailwind = (): Prompt => {
 export const PromptBackend = (backendOptions: Option[]): Prompt => {
 	return {
 		type: "select",
-		message: "💾 Select a backend for your project?",
+		message: "💾 Select a database/backend for your project?",
 		options: backendOptions,
 	};
 };
