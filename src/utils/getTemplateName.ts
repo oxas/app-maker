@@ -6,5 +6,5 @@ export default (responses: Response[]) => {
 			newResList.push(v);
 		}
 	});
-	return newResList.join("_");
+	return newResList.join("-");
 };

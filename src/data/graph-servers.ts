@@ -18,7 +18,7 @@ const GraphqlServers: { [key in GraphServerKeys]: Option } = {
 		hint: "Mercurius is a flexible and extendible GraphQL adapter for Fastify",
 	},
 	default: {
-		id: null,
+		id: "graphql",
 		label: "GraphQL.js",
 		flag: "Reference implementation",
 		hint: "The reference implementation of the GraphQL specification, designed for running GraphQL in a Node.js environment.",

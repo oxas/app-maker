@@ -50,10 +50,10 @@ export const PromptBackend = (backendOptions: Option[]): Prompt => {
 export const PromptApiType = (graphqlServerOptions: Option[]): Prompt => {
 	return {
 		type: "confirm",
-		message: `☁ Select your server type?`,
+		message: `Select your server type?`,
 		active: { id: null, label: "REST API" },
 		inactive: {
-			id: "graph",
+			id: null,
 			label: "GraphQL API",
 			prompts: [
 				{
